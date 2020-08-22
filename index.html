@@ -266,7 +266,7 @@
         <section class="section">
             <div class="container">
             <h2 class="section-title">Постоянные клиенты</h2>
-            <ul class="list clients-link flexbox">
+            <ul class="list clients-link">
                 <li class="clients-item">
                     <a class="clients" href="#">
                         <svg class="clients-icon" width="44" height="49">
@@ -375,10 +375,19 @@
                         
                 <div class="footer-box-item">
                     <h2 class="footer-title">Подпешитесь на рассылку</h2>
-                    <form class="footer-form" id="subscription-form">
-                        <input class="subscription-field" type="email" placeholder="E-mail">
-                        <button class="btn-subscription">Подписаться</button>
-                    </form>
+                    <div class="footer-form-box">
+                        <form class="footer-form">
+                            <input class="subscription-field" id="subscription-mail" type="email" placeholder="E-mail">
+                        </form>
+                        <div class="btn-box">
+                            <button class="btn-subscription" type="submit">
+                                <span class="btn-text">Подписаться</span>
+                            </button>
+                            <svg class="icon-send" width="24"  height="24">
+                                <use href="./images/icons/sprite.svg#icon-send"></use>
+                            </svg>
+                        </div>  
+                    </div>
                 </div>
             </div>
         </section>
@@ -390,7 +399,30 @@
                     <use href="./images/icons/sprite.svg#icon-close"></use>
                 </svg>   
             </button>
-        </div>
+            <div class="form-box">
+                <h2 class="title-modal">Оставьте свои данные, мы вам перезвоним</h2>
+                <form class="form">
+                    <div class="form-field">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text" class="form-input" id="name" name="name">
+                    </div>
+                    <div>
+                        <label for="phone" class="form-label">Телефон</label>
+                            <input type="tel" class="form-input" id="phone" name="phone">
+                    </div>
+                    <div>
+                        <label for="mail" class="form-label">Почта</label>  
+                            <input type="email" class="form-input" id="mail" name="mail">
+                    </div>
+                    <div>
+                        <label for="">
+                            <input type="text">
+                        </label>
+                    </div>
+                </form>
+                <button class="btn-submit" type="submit">Отправить</button>
+            </div>
+        </div>    
     </div>
     <script src="./js/modal.js"></script>
 </body>
