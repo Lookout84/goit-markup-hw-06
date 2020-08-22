@@ -939,6 +939,13 @@ img {
   font-weight: 700;
   font-size: 16px;
   color: var(--accent-color-white);
+
+  transition: box-shadow var(--time-transition-duration) var(--timing-function-cubic);
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
 }
 
 .icon-name {
