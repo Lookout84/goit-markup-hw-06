@@ -151,29 +151,29 @@
     <footer>
         <section class="section footer">
             <div class="container footer-box flexbox">
-                <div class="footer-box-item">
-                    <h2 class="logo-footer">
-                        <span class="logo-web">Web</span>
-                        <span class="logo-white">Studio</span>
-                    </h2>
+                <div class="footer-box-item footer-flexbox">
+                    <div class="footer-box-list">
                         <address class="address">
-                        <ul class="list">
-                            <li class="addr-footer">
-                                <span class="addr">г. Киев, пр-т Леси Украинки, 26</span>
-                            </li>
-                            <li class="addr-footer">
-                                <a href="mailto:info@devstudio.com" class="contacts-footer">info@devstudio.com</a>
-                            </li>
-                            <li class="addr-footer">
-                                <a href="tel:380961111111" class="contacts-footer">+38 096 111 11 11</a>
-                            </li>
-                            </ul>
+                            <ul class="list">
+                                <li class="logo-footer">
+                                    <span class="logo-web">Web</span>
+                                    <span class="logo-white">Studio</span>
+                                </li>
+                                <li class="addr-footer">
+                                    <span class="addr">г. Киев, пр-т Леси Украинки, 26</span>
+                                </li>
+                                <li class="addr-footer">
+                                    <a href="mailto:info@devstudio.com" class="contacts-footer">info@devstudio.com</a>
+                                </li>
+                                <li class="addr-footer">
+                                    <a href="tel:380961111111" class="contacts-footer">+38 096 111 11 11</a>
+                                </li>
+                                </ul>
                         </address>
                     </div>
-
-                    <div class="footer-box-item">
+                    <div class="footer-box-list">
                         <h2 class="footer-title">Присоединяйтесь</h2>
-                        <ul class="list social-footer flexbox">
+                        <ul class="list social-footer">
                             <li class="social-footer-link">
                                 <a class="social-footer-item" href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                                     <svg class="footer-icon" width="20px" height="20px">
@@ -199,13 +199,28 @@
                                 <a class="social-footer-item" href="https://linkedin.com" aria-label="Linkedin" target="_blank" rel="noopener noreferrer">
                                     <svg class="footer-icon" width="20px" height="20px">
                                         <use href="./images/icons/sprite.svg#icon-linkedin"></use>
-                                      </svg>
+                                    </svg>
                                 </a>
                             </li>
                         </ul>
                     </div>
+                </div>
+                        
                 <div class="footer-box-item">
                     <h2 class="footer-title">Подпешитесь на рассылку</h2>
+                    <div class="footer-form-box">
+                        <form class="footer-form">
+                            <input class="subscription-field" id="subscription-mail" type="email" placeholder="E-mail">
+                        </form>
+                        <div class="btn-box">
+                            <button class="btn-subscription" type="submit">
+                                <span class="btn-text">Подписаться</span>
+                            </button>
+                            <svg class="icon-send" width="24"  height="24">
+                                <use href="./images/icons/sprite.svg#icon-send"></use>
+                            </svg>
+                        </div>  
+                    </div>
                 </div>
             </div>
         </section>
