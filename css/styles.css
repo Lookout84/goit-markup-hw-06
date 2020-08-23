@@ -821,10 +821,11 @@ img {
   position: absolute;
   display: block;
   padding: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   top: 8px;
   right: 8px;
+  border-radius: 50px;
   background-color: #FFFFFF;
-  border: transparent;
   width: 30px;
   height: 30px;
   transition: fill var(--time-transition-duration) var(--timing-function-cubic);
@@ -865,9 +866,9 @@ img {
 }
 
 .form {
-  width: 448px;
+  width: 100%;
   padding: 0;
-  margin: 0;
+  margin: 0 0 30px;
 }
 
 .form-label {
@@ -892,20 +893,15 @@ img {
   padding-left: 42px;
   font-size: 12px;
   color: #000000;
+  outline-color: var(--accent-color);
   transition: outline-color var(--time-transition-duration) var(--timing-function-cubic);
 }
 
-.form-input-name {
+.form-input-box {
   position: relative;
+  margin: 0;
+  padding: 0;
 }
-
-.form-input-phone {
-  position: relative;
-}
-
-.form-input-mail {
-  position: relative;
-} 
 
 .form-textarea {
   resize: none;
@@ -917,6 +913,7 @@ img {
   font-size: 12px;
   color: #000000;
   margin-bottom: 10px;
+  outline-color: var(--accent-color);
   transition: outline-color var(--time-transition-duration) var(--timing-function-cubic);
 }
 
@@ -928,10 +925,15 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.btn-position {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .btn-submit {
-  position: absolute;
-  left: 152px;
-  bottom: 40px;
+  display: block;
+  margin-bottom: 40px;
   min-width: 200px;
   height: 50px;
   border: transparent;
@@ -953,39 +955,16 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
 }
 
-.icon-name {
+.icon-form {
   position: absolute;
-  top: 14px;
-  left: 15px;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-80%);
   transition: fill var(--time-transition-duration) var(--timing-function-cubic);
 }
-
-.icon-tel {
-  position: absolute;
-  top: 13px;
-  left: 14px;
-  transition: fill var(--time-transition-duration) var(--timing-function-cubic);
-}
-
-.icon-email {
-  position: absolute;
-  top: 14px;
-  left: 13px;
-  transition: fill var(--time-transition-duration) var(--timing-function-cubic);
-}
-
-/*.form-input:hover,
-.form-input-name:hover .icon-name,
-.form-input-phone:hover .icon-tel,
-.form-input-mail:hover .icon-email {
-  fill: var(--accent-color);
-  outline-color: var(--accent-color);
-}*/
 
 .form-input:focus,
-.form-input-name:focus-within .icon-name,
-.form-input-phone:focus-within .icon-tel,
-.form-input-mail:focus-within .icon-email,
+.form-input-box:focus-within .icon-form,
 .form-textarea:focus-within {
   fill: var(--accent-color);
   outline-color: var(--accent-color);
@@ -997,7 +976,31 @@ img {
   justify-content: center;
 }
 
-.label-contract {
+.form-checkbox {
+  appearance: none;
+}
+
+.icon-check {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--main-color);
+  border-radius: 4px;
+  background-image: url(../images/icons/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  margin-right: 7px;
+}
+
+.form-checkbox:checked + .icon-check {
+  background-color: var(--accent-color);
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.contract-label {
+  display: flex;
+  align-items: center;
   margin-left: 7px;
   font-family: Roboto;
   font-weight: 400;
