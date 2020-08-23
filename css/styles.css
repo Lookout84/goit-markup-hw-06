@@ -970,32 +970,36 @@ img {
   outline-color: var(--accent-color);
 }
 
-.form-field-checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .form-checkbox {
-  appearance: none;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 .icon-check {
   display: inline-block;
-  width: 16px;
+  width: 15px;
   height: 15px;
   border: 2px solid var(--main-color);
   border-radius: 4px;
-  background-image: url(../images/icons/icon-check.svg);
-  background-size: contain;
-  background-origin: border-box;
   margin-right: 7px;
+  transition: background-color var(--time-transition-duration) var(--timing-function-cubic),
+    border-color var(--time-transition-duration) var(--timing-function-cubic);
 }
 
 .form-checkbox:checked + .icon-check {
+  border-color: transparent;
   background-color: var(--accent-color);
-  fill: var(--accent-color);
+  background-image: url('../images/icons/icon-check.svg');
   border-color: var(--accent-color);
+  background-size: contain;
+  background-origin: border-box;
 }
 
 .contract-label {
